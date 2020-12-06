@@ -20,7 +20,7 @@ public class AgentServer {
       while (true) {
          try {
             socket = serversocket.accept();
-            System.out.println(socket.getInetAddress() + " Á¢¼ÓÇÔ");
+            System.out.println(socket.getInetAddress() + " ì ‘ì†í•¨");
             new AgentThread(socket).start();
          } catch (Exception e) {
             e.printStackTrace();

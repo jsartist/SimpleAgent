@@ -54,46 +54,46 @@ public class AgentClient extends JFrame{
 	}
 	
 	private void GUISetting() {
-		  // JFrame Å©±â ¹× ÀÌ¸§
+		  // JFrame í¬ê¸° ë° ì´ë¦„
 		  setSize(300, 400);
-		  setTitle("º¸¾È°æÁø´ëÈ¸ AGENT");
+		  setTitle("ë³´ì•ˆê²½ì§„ëŒ€íšŒ AGENT");
 		  
-		  //icon º¯°æ
+		  //icon ë³€ê²½
 		  setIconImage(Toolkit());
 		  
-		  // È­¸é Áß¾Ó
+		  // í™”ë©´ ì¤‘ì•™
 		  Dimension frameSize = this.getSize();
 		  Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		  setLocation((screenSize.width - frameSize.width) / 2, (screenSize.height - frameSize.height) / 2);
 		  
-		  // X È°¼ºÈ­
+		  // X í™œì„±í™”
 		  setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-		  // panel »ı¼º, ·¹ÀÌ¾Æ¿ôÀº »ç¿ëÀÚÁöÁ¤À¸·Î ÇÏ°Ú´Ù.
+		  // panel ìƒì„±, ë ˆì´ì•„ì›ƒì€ ì‚¬ìš©ìì§€ì •ìœ¼ë¡œ í•˜ê² ë‹¤.
 		  panel = new JPanel();
 		  panel.setLayout(null);
 		  
-		  // Ã¼Å©¹Ú½º
-		  ok = new JCheckBox("º» ´ëÈ¸¿¡ Âü¿©ÇÕ´Ï´Ù.");
+		  // ì²´í¬ë°•ìŠ¤
+		  ok = new JCheckBox("ë³¸ ëŒ€íšŒì— ì°¸ì—¬í•©ë‹ˆë‹¤.");
 		  ok.setBounds(65, 250, 200, 30);
 		  checkBoxClick();
 		  
-		  // Button »ı¼º ¹× Å©±â¿Í À§Ä¡ ¼³Á¤
-		  button = new JButton("È®ÀÎ");
+		  // Button ìƒì„± ë° í¬ê¸°ì™€ ìœ„ì¹˜ ì„¤ì •
+		  button = new JButton("í™•ì¸");
 		  button.setBounds(45, 300, 200, 30);
 		  buttonClick();
 		  button.setEnabled(false);
 		  
-		  // ¶óº§
-		  label1 = new JLabel("    ÆÀ ÀÌ¸§ :   ");
-		  label2 = new JLabel("  Âü°¡ÀÚ ÀÌ¸§ :");
+		  // ë¼ë²¨
+		  label1 = new JLabel("    íŒ€ ì´ë¦„ :   ");
+		  label2 = new JLabel("  ì°¸ê°€ì ì´ë¦„ :");
 		  label1.setBounds(20, 150, 80, 30);
 		  label2.setBounds(10, 200, 80, 30);
 		  setIcon();
 		  img = new JLabel(icon);
 		  img.setBounds(43, 20, 200, 100);
 		  
-		  // ÅØ½ºÆ® ÇÊµå
+		  // í…ìŠ¤íŠ¸ í•„ë“œ
 		  textfield1 = new JTextField();
 		  textfield2 = new JTextField();
 		  textfield1.setBounds(110, 150, 150, 30);
@@ -101,7 +101,7 @@ public class AgentClient extends JFrame{
 		  textfield1.setDocument(new JTextFieldLimit(40));
 		  textfield2.setDocument(new JTextFieldLimit(6));
 		  
-		  // panel¿¡ ºÙÀÌ±â
+		  // panelì— ë¶™ì´ê¸°
 		  panel.add(img);
 		  panel.add(label1);
 		  panel.add(textfield1);
@@ -110,11 +110,11 @@ public class AgentClient extends JFrame{
 		  panel.add(ok);
 		  panel.add(button);
 		  
-		  // panelÀ» frame¿¡ ºÙÀÌ±â
+		  // panelì„ frameì— ë¶™ì´ê¸°
 		  add(panel);
-		  // »çÀÌÁî º¯°æ ºÒ°¡´É
+		  // ì‚¬ì´ì¦ˆ ë³€ê²½ ë¶ˆê°€ëŠ¥
 		  setResizable(false); 
-		  // ¶ç¿ì±â
+		  // ë„ìš°ê¸°
 		  setVisible(true);
 	}
 	
@@ -143,7 +143,7 @@ public class AgentClient extends JFrame{
 		}
 	}
 	
-	// ¿©·¯°¡Áö ÇÔ¼öµé
+	// ì—¬ëŸ¬ê°€ì§€ í•¨ìˆ˜ë“¤
 	
 	private void checkBoxClick() {
 		ok.addItemListener(new ItemListener() {
@@ -165,25 +165,25 @@ public class AgentClient extends JFrame{
 		button.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				if(checkBlank() == 0) {
-					JOptionPane.showMessageDialog(null, "ÆÀ ÀÌ¸§ ¶Ç´Â Âü°¡ÀÚ ÀÌ¸§À» Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.", "º¸¾È°æÁø´ëÈ¸ AGENT", 
+					JOptionPane.showMessageDialog(null, "íŒ€ ì´ë¦„ ë˜ëŠ” ì°¸ê°€ì ì´ë¦„ì„ ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.", "ë³´ì•ˆê²½ì§„ëŒ€íšŒ AGENT", 
 							JOptionPane.ERROR_MESSAGE);
 					return;
 				}
 				else {
 					if(ConnectServer() == -1) {
-						JOptionPane.showMessageDialog(null, "ÇöÀç ¼­¹ö°¡ ´İÇôÀÖ½À´Ï´Ù.", "º¸¾È°æÁø´ëÈ¸ AGENT", 
+						JOptionPane.showMessageDialog(null, "í˜„ì¬ ì„œë²„ê°€ ë‹«í˜€ìˆìŠµë‹ˆë‹¤.", "ë³´ì•ˆê²½ì§„ëŒ€íšŒ AGENT", 
 								JOptionPane.ERROR_MESSAGE);
 					}
 					else {
 						int c = Check();
 						if(c == 0){
-							JOptionPane.showMessageDialog(null, "ÆÀ ÀÌ¸§ ¶Ç´Â Âü°¡ÀÚ ÀÌ¸§À» Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.", "º¸¾È°æÁø´ëÈ¸ AGENT", 
+							JOptionPane.showMessageDialog(null, "íŒ€ ì´ë¦„ ë˜ëŠ” ì°¸ê°€ì ì´ë¦„ì„ ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.", "ë³´ì•ˆê²½ì§„ëŒ€íšŒ AGENT", 
 									JOptionPane.ERROR_MESSAGE);
 							DisconnectServer();
 							return;
 						}
 						else if(c == 2) { 
-							JOptionPane.showMessageDialog(null, "ÀÌ¹Ì µî·ÏµÇ¾îÀÖ°Å³ª Áßº¹µÈ °ªÀÌ Á¸ÀçÇÕ´Ï´Ù. ¼öÁ¤À» ¿øÇÒ °æ¿ì, °ü¸®ÀÚ¿¡°Ô ¹®ÀÇÇÏ½Ã±â ¹Ù¶ø´Ï´Ù. (010-4923-1132)", "º¸¾È°æÁø´ëÈ¸ AGENT",
+							JOptionPane.showMessageDialog(null, "ì´ë¯¸ ë“±ë¡ë˜ì–´ìˆê±°ë‚˜ ì¤‘ë³µëœ ê°’ì´ ì¡´ì¬í•©ë‹ˆë‹¤. ìˆ˜ì •ì„ ì›í•  ê²½ìš°, ê´€ë¦¬ìì—ê²Œ ë¬¸ì˜í•˜ì‹œê¸° ë°”ëë‹ˆë‹¤. (010-4923-1132)", "ë³´ì•ˆê²½ì§„ëŒ€íšŒ AGENT",
 									JOptionPane.ERROR_MESSAGE); 
 							DisconnectServer();
 							return;
@@ -193,7 +193,7 @@ public class AgentClient extends JFrame{
 							String last_check = getMacAddress();
 							DisconnectServer();
 							if(last_check.equals("1")) {
-								JOptionPane.showMessageDialog(null, "¿Ï·áµÇ¾ú½À´Ï´Ù.", "º¸¾È°æÁø´ëÈ¸ AGENT", 
+								JOptionPane.showMessageDialog(null, "ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.", "ë³´ì•ˆê²½ì§„ëŒ€íšŒ AGENT", 
 										JOptionPane.INFORMATION_MESSAGE);
 								ok.setEnabled(false);
 								button.setEnabled(false);
@@ -201,7 +201,7 @@ public class AgentClient extends JFrame{
 								textfield2.setEnabled(false);
 							}
 							else {
-								JOptionPane.showMessageDialog(null, "ÀÌ¹Ì µî·ÏµÇ¾îÀÖ°Å³ª Áßº¹µÈ °ªÀÌ Á¸ÀçÇÕ´Ï´Ù. ¼öÁ¤À» ¿øÇÒ °æ¿ì, °ü¸®ÀÚ¿¡°Ô ¹®ÀÇÇÏ½Ã±â ¹Ù¶ø´Ï´Ù. (010-4923-1132)", "º¸¾È°æÁø´ëÈ¸ AGENT",
+								JOptionPane.showMessageDialog(null, "ì´ë¯¸ ë“±ë¡ë˜ì–´ìˆê±°ë‚˜ ì¤‘ë³µëœ ê°’ì´ ì¡´ì¬í•©ë‹ˆë‹¤. ìˆ˜ì •ì„ ì›í•  ê²½ìš°, ê´€ë¦¬ìì—ê²Œ ë¬¸ì˜í•˜ì‹œê¸° ë°”ëë‹ˆë‹¤. (010-4923-1132)", "ë³´ì•ˆê²½ì§„ëŒ€íšŒ AGENT",
 										JOptionPane.ERROR_MESSAGE);
 							}
 						}
@@ -243,7 +243,7 @@ public class AgentClient extends JFrame{
 		}
 	}
 	
-	private byte[] incode(String mac) {  // ¼öÁ¤ºÎºĞ 1
+	private byte[] incode(String mac) {  // ìˆ˜ì •ë¶€ë¶„ 1
 		try {
 			Cipher ci = Cipher.getInstance("RSA");
 			ci.init(Cipher.ENCRYPT_MODE, publicKey);

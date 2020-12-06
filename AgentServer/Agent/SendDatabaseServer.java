@@ -13,7 +13,7 @@ public class SendDatabaseServer {
    
    public String Check(String team_name, String name) {
 	   String check = dbserver.selectData(team_name, name);
-	   System.out.println("�Է°� : " +team_name + ", " + name);
+	   System.out.println("입력값 : " +team_name + ", " + name);
 	   if(check.equals("1")) {
 		   this.team_name = team_name;
 		   this.name = name;

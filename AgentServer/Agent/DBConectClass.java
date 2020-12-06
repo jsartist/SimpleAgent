@@ -27,7 +27,7 @@ public class DBConectClass {
          setURL();
          Class.forName(driver);
          con = DriverManager.getConnection(url, info[2], info[3]);
-         System.out.println("DB°¡ ¿¬°áµÇ¾ú½À´Ï´Ù.");
+         System.out.println("DBê°€ ì—°ê²°ë˜ì—ˆìŠµë‹ˆë‹¤.");
          return con;
       }
       catch(Exception e) {
@@ -60,21 +60,21 @@ public class DBConectClass {
          try {
             rs.close();
          } catch (SQLException e) {
-            System.out.println("ResultSetÀ» Á¾·áÇÏ´Â µ¿¾È ¿À·ù°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù.");
+            System.out.println("ResultSetì„ ì¢…ë£Œí•˜ëŠ” ë™ì•ˆ ì˜¤ë¥˜ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤.");
          }
       }
       if (pst != null) {
          try {
             pst.close();
          } catch (SQLException e) {
-            System.out.println("PrepareStatement¸¦ Á¾·áÇÏ´Â µ¿¾È ¿À·ù°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù.");
+            System.out.println("PrepareStatementë¥¼ ì¢…ë£Œí•˜ëŠ” ë™ì•ˆ ì˜¤ë¥˜ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤.");
          }
       }
       if (con != null) {
          try {
             con.close();
          } catch (SQLException e) {
-            System.out.println("ConnectionÀ» Á¾·áÇÏ´Â µ¿¾È ¿À·ù°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù.");
+            System.out.println("Connectionì„ ì¢…ë£Œí•˜ëŠ” ë™ì•ˆ ì˜¤ë¥˜ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤.");
          }
       }
    }

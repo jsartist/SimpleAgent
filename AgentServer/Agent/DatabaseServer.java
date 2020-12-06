@@ -41,7 +41,7 @@ public class DatabaseServer {
 					}
 					else {
 						dbClose();
-						System.out.println("mac Áßº¹¹ß»ı " + name);
+						System.out.println("mac ì¤‘ë³µë°œìƒ " + name);
 						return "2";
 					}
 				}
@@ -111,21 +111,21 @@ public class DatabaseServer {
 	         try {
 	            rs.close();
 	         } catch (SQLException e) {
-	            System.out.println("ResultSetÀ» Á¾·áÇÏ´Â µ¿¾È ¿À·ù°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù.");
+	            System.out.println("ResultSetì„ ì¢…ë£Œí•˜ëŠ” ë™ì•ˆ ì˜¤ë¥˜ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤.");
 	         }
 	      }
 	      if (pre != null) {
 	         try {
 	            pre.close();
 	         } catch (SQLException e) {
-	            System.out.println("PrepareStatement¸¦ Á¾·áÇÏ´Â µ¿¾È ¿À·ù°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù.");
+	            System.out.println("PrepareStatementë¥¼ ì¢…ë£Œí•˜ëŠ” ë™ì•ˆ ì˜¤ë¥˜ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤.");
 	         }
 	      }
 	      if (con != null) {
 	         try {
 	            con.close();
 	         } catch (SQLException e) {
-	            System.out.println("ConnectionÀ» Á¾·áÇÏ´Â µ¿¾È ¿À·ù°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù.");
+	            System.out.println("Connectionì„ ì¢…ë£Œí•˜ëŠ” ë™ì•ˆ ì˜¤ë¥˜ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤.");
 	         }
 	      }
 	   }

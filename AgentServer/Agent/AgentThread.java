@@ -124,7 +124,7 @@ public class AgentThread extends Thread {
 		   e.printStackTrace();
 		   socketClose();
 	   }finally {
-		   System.out.println(socket.getInetAddress() + " Á¾·á");
+		   System.out.println(socket.getInetAddress() + " ì¢…ë£Œ");
 		   socketClose();
 	   }
    }
