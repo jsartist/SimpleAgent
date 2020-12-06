@@ -1,0 +1,4 @@
+DB_IP(127.0.0.1)
+DB_PORT(65535)
+DB_ID(himyname)
+DB_PW(himyname)
