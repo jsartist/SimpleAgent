@@ -183,7 +183,7 @@ public class AgentClient extends JFrame{
 							return;
 						}
 						else if(c == 2) { 
-							JOptionPane.showMessageDialog(null, "이미 등록되어있거나 중복된 값이 존재합니다. 수정을 원할 경우, 관리자에게 문의하시기 바랍니다. (010-4923-1132)", "보안경진대회 AGENT",
+							JOptionPane.showMessageDialog(null, "이미 등록되어있거나 중복된 값이 존재합니다. 수정을 원할 경우, 관리자에게 문의하시기 바랍니다.", "보안경진대회 AGENT",
 									JOptionPane.ERROR_MESSAGE); 
 							DisconnectServer();
 							return;
@@ -201,7 +201,7 @@ public class AgentClient extends JFrame{
 								textfield2.setEnabled(false);
 							}
 							else {
-								JOptionPane.showMessageDialog(null, "이미 등록되어있거나 중복된 값이 존재합니다. 수정을 원할 경우, 관리자에게 문의하시기 바랍니다. (010-4923-1132)", "보안경진대회 AGENT",
+								JOptionPane.showMessageDialog(null, "이미 등록되어있거나 중복된 값이 존재합니다. 수정을 원할 경우, 관리자에게 문의하시기 바랍니다.", "보안경진대회 AGENT",
 										JOptionPane.ERROR_MESSAGE);
 							}
 						}
